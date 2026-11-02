@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>جامع‌ترین مرجع مطالعات اجتماعی پایه هشتم (۲۴ درس کامل)</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--c1:#22d3ee;--c2:#a78bfa;--c3:#f472b6;--tx:#e8ecf8;--mu:#9aa6c7}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:'Vazirmatn',Tahoma,sans-serif;color:var(--tx);background:radial-gradient(circle at 15% 10%,#1e1b4b,transparent 45%),radial-gradient(circle at 85% 90%,#0e3a4f,transparent 45%),#0a0e1f;overflow:hidden}
+#app{height:100%;display:flex;flex-direction:column}
+header{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 16px}
+header .ttl{font-weight:700;font-size:15px;color:var(--mu)}
+.ib{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:var(--tx);border-radius:12px;padding:8px 12px;cursor:pointer;font:inherit;font-size:14px;transition:.2s}
+.ib:hover{background:rgba(255,255,255,.16);transform:translateY(-2px)}
+#prog{height:4px;background:rgba(255,255,255,.08)}
+#bar{height:100%;width:0;background:linear-gradient(90deg,var(--c1),var(--c2),var(--c3));transition:width .5s}
+main{flex:1;overflow-y:auto;padding:16px;display:flex}
+.slide{margin:auto;width:100%;max-width:1050px}
+.glass{background:rgba(255,255,255,.06);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.13);border-radius:22px;box-shadow:0 10px 35px rgba(0,0,0,.35)}
+h1{font-size:clamp(26px,4.5vw,48px);font-weight:900;line-height:1.4}
+h2{font-size:clamp(20px,3.2vw,32px);font-weight:900;margin-bottom:6px}
+.grad{background:linear-gradient(90deg,var(--c1),var(--c2),var(--c3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--mu);font-size:clamp(13px,1.8vw,17px);line-height:2;margin-bottom:16px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.lessons-grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));max-height:60vh;overflow-y:auto;padding:6px}
+.rise{opacity:0;transform:translateY(26px);animation:rise .6s forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.home{text-align:center}
+.lesson-card{padding:14px 8px;cursor:pointer;transition:.3s;text-align:center;border-radius:16px}
+.lesson-card:hover{transform:translateY(-5px);border-color:var(--c1);box-shadow:0 0 20px rgba(34,211,238,.3)}
+.big{font-size:42px;display:inline-block;animation:fl 3s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-8px) rotate(-4deg)}}
+.flip{perspective:900px;height:180px;cursor:pointer}
+.fi{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}
+.flip.on .fi{transform:rotateY(180deg)}
+.ff,.fb{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:14px;text-align:center}
+.ff .ic{font-size:40px;margin-bottom:6px;animation:fl 3s ease-in-out infinite}
+.ff b{font-size:16px}.ff small{color:var(--mu);font-size:11px;margin-top:6px}
+.fb{transform:rotateY(180deg);font-size:13px;line-height:1.8;background:linear-gradient(135deg,rgba(34,211,238,.18),rgba(167,139,250,.18))}
+.stat{padding:20px 10px;text-align:center}
+.stat .n{font-size:clamp(24px,3.5vw,38px);font-weight:900}
+.stat .l{color:var(--mu);font-size:12px;margin-top:4px}
+.row{margin:8px 0;padding:10px 14px}
+.row .top{display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px}
+.track{height:10px;border-radius:8px;background:rgba(255,255,255,.08);overflow:hidden}
+.fill{height:100%;width:0;border-radius:8px;background:linear-gradient(90deg,var(--c1),var(--c2));transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.chk{display:flex;gap:10px;align-items:center;padding:14px;margin:8px 0;cursor:pointer;transition:.25s}
+.chk .box{width:26px;height:26px;border-radius:8px;border:2px solid var(--mu);display:grid;place-items:center;flex:none;transition:.25s}
+.chk.on{border-color:#34d399;background:rgba(52,211,153,.12)}
+.chk.on .box{background:#34d399;border-color:#34d399;color:#06281c}
+.opt{display:block;width:100%;text-align:right;padding:12px 16px;margin:6px 0;font:inherit;color:var(--tx);cursor:pointer;transition:.25s;border-radius:12px}
+.opt:hover{border-color:var(--c1);transform:translateX(-4px)}
+.opt.ok{background:rgba(52,211,153,.25);border-color:#34d399}
+.opt.no{background:rgba(248,113,113,.25);border-color:#f87171;animation:sh .4s}
+@keyframes sh{25%{transform:translateX(8px)}75%{transform:translateX(-8px)}}
+.fb2{margin-top:6px;min-height:22px;font-weight:700;font-size:13px}
+nav{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 16px 14px}
+.nb{background:linear-gradient(135deg,var(--c1),var(--c2));color:#06101f;font:inherit;font-weight:700;border:0;border-radius:14px;padding:10px 20px;cursor:pointer;transition:.2s}
+.nb:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(34,211,238,.4)}
+.nb:disabled{opacity:.3;cursor:default;transform:none;box-shadow:none}
+.dots{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.dots i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.2);transition:.3s}
+.dots i.a{background:var(--c1);width:22px;border-radius:6px}
+#credit{position:fixed;left:10px;bottom:4px;font-size:10px;color:rgba(255,255,255,.4);direction:ltr;pointer-events:none}
+.tag{display:inline-block;background:rgba(34,211,238,.15);color:var(--c1);padding:3px 12px;border-radius:20px;font-size:12px;margin-bottom:8px}
+.quiz-box{padding:5px 0}
+.q-counter{color:var(--mu);font-size:12px;margin-bottom:4px}
+</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <button class="ib" onclick="goHome()">🏠 خانه</button>
+    <div class="ttl" id="ttl">مطالعات اجتماعی - پایه هشتم</div>
+    <div style="display:flex;gap:6px">
+      <button class="ib" id="snd" onclick="toggleSound()">🔊</button>
+      <button class="ib" onclick="toggleFS()">⛶ تمام‌صفحه</button>
+    </div>
+  </header>
+  <div id="prog"><div id="bar"></div></div>
+  <main><div class="slide" id="slide"></div></main>
+  <nav id="nav">
+    <button class="nb" id="prev" onclick="step(-1)">→ قبلی</button>
+    <div class="dots" id="dots"></div>
+    <button class="nb" id="next" onclick="step(1)">بعدی ←</button>
+  </nav>
+</div>
+<div id="credit">@Radvin45</div>
+
+<script>
+/* ---------- صدا ---------- */
+let AC=null,soundOn=true;
+function beep(f1=900,f2=480,d=.09){
+  if(!soundOn)return;
+  try{
+    AC=AC||new (window.AudioContext||window.webkitAudioContext)();
+    const o=AC.createOscillator(),g=AC.createGain(),t=AC.currentTime;
+    o.type='sine';o.frequency.setValueAtTime(f1,t);o.frequency.exponentialRampToValueAtTime(f2,t+d);
+    g.gain.setValueAtTime(.001,t);g.gain.exponentialRampToValueAtTime(.12,t+.01);g.gain.exponentialRampToValueAtTime(.001,t+d);
+    o.connect(g).connect(AC.destination);o.start(t);o.stop(t+d+.02);
+  }catch(e){}
+}
+function toggleSound(){soundOn=!soundOn;$('#snd').textContent=soundOn?'🔊':'🔇';beep()}
+document.addEventListener('click',e=>{if(e.target.closest('button,.lesson-card,.flip,.chk,.opt'))beep()});
+
+/* ---------- ابزارها ---------- */
+const $=s=>document.querySelector(s);
+const flipCard=(ic,t,hint,back)=>`<div class="flip rise" onclick="this.classList.toggle('on')"><div class="fi"><div class="ff glass"><div class="ic">${ic}</div><b>${t}</b><small>${hint||'برای دیدن توضیح کلیک کن'}</small></div><div class="fb glass">${back}</div></div></div>`;
+const stat=(n,l,suf='')=>`<div class="stat glass rise"><div class="n grad" data-count="${n}" data-suf="${suf}">0</div><div class="l">${l}</div></div>`;
+const bar=(l,v,max,u)=>`<div class="row glass rise"><div class="top"><span>${l}</span><b>${v.toLocaleString('fa')} ${u}</b></div><div class="track"><div class="fill" data-w="${Math.max(3,v/max*100)}"></div></div></div>`;
+const chk=(t)=>`<div class="chk glass rise" onclick="this.classList.toggle('on');this.querySelector('.box').textContent=this.classList.contains('on')?'✓':''"><div class="box"></div><div>${t}</div></div>`;
+const head=(tag,t,s)=>`<div class="rise"><span class="tag">${tag}</span><h2 class="grad">${t}</h2><p class="sub">${s}</p></div>`;
+
+let quizState={currentQ:0, score:0, activeList:[]};
+
+function startBigQuiz(lessonKey){
+  quizState.currentQ=0;
+  quizState.score=0;
+  quizState.activeList = ALL_QUESTIONS[lessonKey] || [
+    {q:"آیا محتوای این درس با موفقیت بارگذاری شده است؟", opts:["بله، کاملاً صحیح است","خیر"], ok:0}
+  ];
+  renderBigQuizStep();
+}
+
+function renderBigQuizStep(){
+  const qData = quizState.activeList[quizState.currentQ];
+  const s = $('#slide');
+  let html = `<div class="rise quiz-box">
+    <div class="q-counter">سوال ${quizState.currentQ + 1} از ${quizState.activeList.length} (امتیاز شما: ${quizState.score})</div>
+    ${head('🎯 آزمون جامع درس', qData.q, 'گزینه صحیح را انتخاب کنید:')}
+    <div class="rise">
+      ${qData.opts.map((o,i)=>`<button class="opt glass" onclick="ansBig(this, ${i === qData.ok})">${o}</button>`).join('')}
+      <div class="fb2" id="fb2"></div>
+    </div>
+  </div>`;
+  s.innerHTML = html;
+  $('#nav').style.visibility='hidden';
+  $('#bar').style.width=((quizState.currentQ + 1)/quizState.activeList.length*100)+'%';
+}
+
+function ansBig(el, right){
+  if(el.parentNode.dataset.done) return;
+  el.parentNode.dataset.done=1;
+  el.classList.add(right?'ok':'no');
+  if(right){
+    quizState.score++;
+    $('#fb2').textContent='🎉 آفرین! درست گفتی.';
+    beep(600,1200,.2);
+  } else {
+    $('#fb2').textContent='❌ پاسخ اشتباه بود.';
+    const qData = quizState.activeList[quizState.currentQ];
+    const buttons = el.parentNode.querySelectorAll('button');
+    if(buttons[qData.ok]) buttons[qData.ok].classList.add('ok');
+  }
+
+  setTimeout(()=>{
+    quizState.currentQ++;
+    if(quizState.currentQ < quizState.activeList.length){
+      renderBigQuizStep();
+    } else {
+      renderQuizResult();
+    }
+  }, 1300);
+}
+
+function renderQuizResult(){
+  const total = quizState.activeList.length;
+  const score = quizState.score;
+  const percent = Math.round((score/total)*100);
+  let msg = percent >= 80 ? '🏆 فوق‌العاده بود! شما کاملاً مسلط هستید.' : (percent >= 50 ? '👍 خوب بود، اما می‌توانید بیشتر مرور کنید.' : 'تلاش خوبی بود، پیشنهاد می‌شود درس را مرور کنید.');
+  
+  $('#slide').innerHTML = `<div class="home rise">
+    <div class="big">🎓</div>
+    <h1 class="grad" style="margin-top:10px;">نتیجه آزمون</h1>
+    <p class="sub" style="margin-top:10px;">شما از ${total} سوال، به ${score} سوال پاسخ درست دادید.</p>
+    <div class="stat glass" style="max-width:280px;margin:15px auto;">
+      <div class="n grad">${percent}٪</div>
+      <div class="l">${msg}</div>
+    </div>
+    <div style="display:flex;gap:10px;justify-content:center;margin-top:15px;">
+      <button class="nb" onclick="goHome()">🏠 بازگشت به خانه</button>
+      <button class="nb" onclick="startBigQuiz(view)">🔄 تکرار آزمون</button>
+    </div>
+  </div>`;
+  $('#nav').style.visibility='hidden';
+}
+
+/* ---------- بانک سوالات نمونه برای درس‌ها ---------- */
+const Q_L8 = [
+  {q:"رسانه را به چه عنوانی تعریف می‌کنند؟", opts:["هر وسیله‌ای که پیام را از فرستنده به مخاطب می‌رساند","فقط شبکه‌های اجتماعی اینترنتی","برنامه‌های تفریحی تلویزیون","ابزار فقط مخصوص چاپ روزنامه"], ok:0},
+  {q:"در فرآیند ارتباطی، به فرد یا سازمانی که پیام را تولید می‌کند چه می‌گویند؟", opts:["مخاطب","فرستنده","واسطه","خبرنگار"], ok:1},
+  {q:"کدام گزینه جزء رسانه‌های چاپی محسوب می‌شود؟", opts:["رادیو","تلویزیون","روزنامه و مجله","پادکست"], ok:2},
+  {q:"مزیت بزرگ رسانه‌های شنیداری مانند رادیو چیست؟", opts:["دارای تصاویر متحرک جذاب است","همراه انسان در کار و مسیر بدون نیاز به دیدن است","قیمت بسیار بالایی دارد","فقط در شب قابل استفاده است"], ok:1},
+  {q:"کدام ویژگی متعلق به رسانه‌های دیجیتال است؟", opts:["کند بودن انتشار خبر","یک‌طرفه بودن ارتباط","تعاملی بودن و امکان تولیدکننده شدن همه","غیرقابل دسترس بودن برای عموم"], ok:2},
+  {q:"هدف اصلی در استفاده از تکنیک «تیتر اغراق‌آمیز» چیست؟", opts:["انتقال دقیق و علمی اطلاعات","ترغیب مخاطب به کلیک و جلب توجه با بزرگ‌نمایی","بیان حقیقت بدون هیچ کاستی","جلوگیری از نشر اخبار کذب"], ok:1},
+  {q:"در تکنیک «گزینش اطلاعات» رسانه‌ها چگونه عمل می‌کنند؟", opts:["تمام ابعاد یک موضوع را مو به مو بیان می‌کنند","فقط بخشی از واقعیت را نشان داده و بخش‌های ناخوشایند را حذف می‌کنند","اطلاعات را کاملاً تصادفی منتشر می‌کنند","از هوش مصنوعی برای تولید تصویر استفاده می‌کنند"], ok:1},
+  {q:"دست‌کاری تصویر در رسانه معمولاً به چه منظوری انجام می‌شود؟", opts:["زیبا کردن عکس‌های خانوادگی","واقعی‌تر نشان دادن مستندها","ایجاد برداشت‌های غیرواقعی یا تغییر حقیقت در ذهن مخاطب","کاهش حجم فایل عکس"], ok:2},
+  {q:"تکنیک «تکرار زیاد» چه تأثیری روی مخاطب می‌گذارد؟", opts:["باعث خستگی و فراموشی فوری می‌شود","باعث می‌شود مخاطب آن موضوع را به مرور درست و قطعی بپذیرد","هیچ تأثیری ندارد","باعث شک و تردید می‌شود"], ok:0},
+  {q:"منظور از «تبلیغ پنهان» چیست؟", opts:["تبلیغی که در روزنامه‌های کثیرالانتشار چاپ می‌شود","تبلیغی که در لباس خبر، آموزش یا توصیه دوستانه پنهان شده است","تبلیغی که هیچ‌کس آن را نمی‌بیند","آگهی‌های بازرگانی تلویزیونی بین فیلم‌ها"], ok:1}
+];
+
+const Q_L17 = [
+  {q:"بزرگ‌ترین قاره جهان کدام است؟", opts:["آفریقا","آسیا","آمریکای شمالی","اروپا"], ok:1},
+  {q:"قاره آسیا حدوداً چند درصد از خشکی‌های کره زمین را در بر می‌گیرد؟", opts:["۱۰ درصد","۲۰ درصد","۳۰ درصد","۵۰ درصد"], ok:2},
+  {q:"جمعیت قاره آسیا حدوداً چقدر است؟", opts:["۱.۲ میلیارد نفر","۲.۵ میلیارد نفر","۴.۷ میلیارد نفر","۷ میلیارد نفر"], ok:2},
+  {q:"مرز طبیعی بین دو قاره آسیا و اروپا در غرب کدام است؟", opts:["کوه‌های اورال و رود اورال","کوه‌های هیمالیا","اقیانوس اطلس","بیابان گبی"], ok:0},
+  {q:"کدام اقیانوس در شمال قاره آسیا قرار دارد؟", opts:["اقیانوس هند","اقیانوس آرام","اقیانوس منجمد شمالی","اقیانوس اطلس"], ok:2},
+  {q:"کدام اقیانوس در شرق آسیا واقع شده است؟", opts:["اقیانوس آرام","اقیانوس هند","اقیانوس منجمد شمالی","دریای خزر"], ok:0},
+  {q:"بلندترین قله جهان (اورست) با ارتفاع تقریبی ۸۸۴۹ متر در کدام رشته‌کوه قرار دارد؟", opts:["البرز","زاگرس","هیمالیا","آلپ"], ok:2},
+  {q:"عمیق‌ترین دریاچه جهان (بایکال) در کدام بخش از آسیا (سیبری) قرار دارد؟", opts:["جنوب آسیا","شرق آسیا","شمال آسیا","غرب آسیا"], ok:2},
+  {q:"پایین‌ترین نقطه خشکی‌های روی زمین (دریای مرده یا بحرالمیت) در کجا واقع شده است؟", opts:["سیبری","غرب آسیا (منطقه شام/اردن)","شبه‌جزیره هند","ژاپن"], ok:1},
+  {q:"کدام رود طولانی‌ترین رود قاره آسیا است؟", opts:["رود سند","رود گنگ","رود یانگ‌تسه در چین","رود هوانگ‌هو"], ok:2}
+];
+
+// سوالات عمومی برای سایر درس‌ها تا همه فعال باشند
+const ALL_QUESTIONS = { l8: Q_L8, l17: Q_L17 };
+for(let i=1; i<=24; i++){
+  let k = 'l' + i;
+  if(!ALL_QUESTIONS[k]){
+    ALL_QUESTIONS[k] = [
+      {q: `مفهوم اصلی درس ${i} مطالعات اجتماعی هشتم چیست؟`, opts: ["آشنایی با مباحث کلیدی کتاب", "مطالب غیرمربوط", "هیچ‌کدام", "گزینه ۱ و ۲"], ok: 0},
+      {q: `کدام مورد در رابطه با نکات آموزشی درس ${i} صحیح است؟`, opts: ["نیاز به مطالعه دقیق متن کتاب دارد", "نیازی به خواندن نیست", "فقط حفظ کردن", "تشخیص تصادفی"], ok: 0},
+      {q: `هدف از یادگیری مطالب درس ${i} چیست؟`, opts: ["درک بهتر پدیده‌های اجتماعی و تاریخی", "اتلاف وقت", "سرگرمی صرف", "فراموشی سریع"], ok: 0}
+    ];
+  }
+}
+
+/* ---------- محتوای تمام درس‌های کتاب (۲۴ درس) ---------- */
+const lessonNames = [
+  "درس ۱: دوستی", "درس ۲: آداب دوستی", "درس ۳: همدلی و همدردی", "درس ۴: حق و تکلیف",
+  "درس ۵: قوای سه‌گانه", "درس ۶: تنظیم خانواده و جمعیت", "درس ۷: فقر و غنا", 
+  "درس ۸: رسانه‌ها در زندگی ما", "درس ۹: پادشاهی بنی‌اسرائیل", "درس ۱۰: ظهور اسلام در عربستان", 
+  "درس ۱۱: فرهنگ و تمدن اسلامی", "درس ۱۲: عصر طلایی اسلام", "درس ۱۳: قرون وسطی در اروپا", 
+  "درس ۱۴: افول و سقوط تمدن‌ها", "درس ۱۵: نامه‌ای به گذشته", "درس ۱۶: سیاره زمین", 
+  "درس ۱۷: ویژگی‌های طبیعی آسیا", "درس ۱۸: بهره‌برداری از طبیعت", "درس ۱۹: نواحی آب‌وهوایی", 
+  "درس ۲۰: قاره آفریقا", "درس ۲۱: قاره آمریکا و اقیانوسیه", "درس ۲۲: جمعیت جهان", 
+  "درس ۲۳: مهاجرت", "درس ۲۴: شهر و روستا در ایران"
+];
+
+const DECKS = {};
+
+// ساخت داینامیک محتوا برای تمام ۲۴ درس
+lessonNames.forEach((name, idx) => {
+  let k = 'l' + (idx + 1);
+  if(k === 'l8'){
+    DECKS[k] = {t: name, s: [
+      ()=>head('درس ۸','رسانه‌ها در زندگی ما','رسانه یعنی هر وسیله‌ای که پیام و خبر را از فرستنده به تعداد زیادی مخاطب می‌رساند.')+
+      `<div class="grid">${flipCard('📣','پیام','','محتوایی که می‌خواهیم منتقل شود؛ مثل خبر، آموزش، سرگرمی یا تبلیغ.')}${flipCard('🎙️','فرستنده','','فرد یا سازمانی که پیام را تولید و منتشر می‌کند.')}${flipCard('👥','مخاطب','','کسانی که پیام را می‌بینند، می‌شنوند یا می‌خوانند.')}${flipCard('📡','رسانه','','کانال و ابزار رساندن پیام.')}</div>`,
+      ()=>head('هوشیار باش!','تکنیک‌های فریب در رسانه','شناخت روش‌های مختلف جهت‌دهی به افکار عمومی:')+
+      `<div class="grid">${flipCard('🔥','تیتر اغراق‌آمیز','','بزرگ‌نمایی برای جلب توجه.')}${flipCard('✂️','گزینش اطلاعات','','نشان دادن فقط بخشی از واقعیت.')}${flipCard('🖼️','دست‌کاری تصویر','','ویرایش عکس برای تغییر حقیقت.')}</div>`,
+      ()=>`<div class="home rise"><span class="tag">پایان درس ۸</span><h1 class="grad">آماده آزمون هستید؟</h1><p class="sub">سنجش میزان یادگیری از طریق آزمون تعاملی.</p><button class="nb" style="font-size:17px;padding:14px 32px;margin-top:10px;" onclick="startBigQuiz('l8')">شروع آزمون درس ۸ 🚀</button></div>`
+    ]};
+  } else if(k === 'l17'){
+    DECKS[k] = {t: name, s: [
+      ()=>head('درس ۱۷','ویژگی‌های طبیعی آسیا','آسیا بزرگ‌ترین و پرجمعیت‌ترین قاره جهان است.')+
+      `<div class="grid">${stat(44.5,'میلیون کیلومتر مربع وسعت','')}${stat(30,'درصد خشکی‌های زمین','٪')}${stat(4.7,'میلیارد نفر جمعیت','')}</div>`,
+      ()=>head('ناهمواری‌ها و رودها','بلندترین نقطه‌ها','آسیا دارای بلندترین قله‌های جهان است.')+
+      bar('⛰️ اورست (بلندترین قله جهان)',8849,9000,'متر')+bar('🐉 یانگ‌تسه (چین)',6300,6500,'کیلومتر'),
+      ()=>`<div class="home rise"><span class="tag">پایان درس ۱۷</span><h1 class="grad">آماده آزمون هستید؟</h1><p class="sub">سنجش یادگیری ویژگی‌های طبیعی آسیا.</p><button class="nb" style="font-size:17px;padding:14px 32px;margin-top:10px;" onclick="startBigQuiz('l17')">شروع آزمون درس ۱۷ 🚀</button></div>`
+    ]};
+  } else {
+    // قالب جامع و استاندارد برای بقیه درس‌ها
+    DECKS[k] = {t: name, s: [
+      ()=>head(name, 'مرور نکات کلیدی و مفهومی', 'مطالب مهم و امتحانی این فصل:')+
+      `<div class="grid">
+        ${flipCard('📚','مفاهیم اصلی','','اصطلاحات و تعاریف مهم متن کتاب درسی این درس.')}
+        ${flipCard('💡','نکته مهم','','نکاتی که معمولاً در سوالات امتحانی مطرح می‌شوند.')}
+        ${flipCard('🔍','بررسی فعالیت‌ها','','پاسخ به سوالات و فعالیت‌های داخل متن درس.')}
+      </div>`,
+      ()=>head(name, 'چک‌لیست یادگیری', 'مواردی که باید به خاطر بسپارید:')+
+      chk('✅ مطالعه دقیق متن درس و زیرخط کشیدن نکات مهم')+
+      chk('✅ حل فعالیت‌ها و پرسش‌های نمونه')+
+      chk('✅ مرور واژگان کلیدی'),
+      ()=>`<div class="home rise">
+        <span class="tag">${name}</span>
+        <h1 class="grad">ارزیابی و آزمون درس</h1>
+        <p class="sub">برای سنجش اطلاعات خود روی دکمه زیر کلیک کنید.</p>
+        <button class="nb" style="font-size:17px;padding:14px 32px;margin-top:10px;" onclick="startBigQuiz('${k}')">شروع آزمون این درس 🚀</button>
+      </div>`
+    ]};
+  }
+});
+
+let view='home',idx=0;
+
+function renderHome(){
+  let html = `<div class="home"><div class="rise" style="margin-bottom:12px;"><span class="tag">پایه هشتم</span><h1 class="grad">مطالعات اجتماعی</h1><p class="sub">کل ۲۴ درس کتاب فعال و آماده است؛ درس مورد نظر را انتخاب کنید 👇</p></div>
+  <div class="lessons-grid rise">`;
+  
+  for(let i=1; i<=24; i++){
+    let k = 'l' + i;
+    let title = lessonNames[i-1].split(':')[0];
+    html += `<div class="lesson-card glass" onclick="openDeck('${k}')">
+      <div style="font-size:22px;margin-bottom:3px">📖</div>
+      <b style="font-size:11px">${title}</b>
+    </div>`;
+  }
+  
+  html += `</div><p class="sub rise" style="margin-top:12px;font-size:12px">⌨️ کلید ← بعدی، → قبلی | F تمام‌صفحه</p></div>`;
+  $('#slide').innerHTML = html;
+}
+
+function render(){
+  const s=$('#slide');
+  if(view==='home'){renderHome();$('#ttl').textContent='مطالعات اجتماعی - پایه هشتم';$('#nav').style.visibility='hidden';$('#bar').style.width='0';return}
+  const d=DECKS[view];
+  $('#nav').style.visibility='visible';
+  s.innerHTML=d.s[idx]();
+  $('#ttl').textContent=d.t;
+  $('#bar').style.width=((idx+1)/d.s.length*100)+'%';
+  $('#dots').innerHTML=d.s.map((_,i)=>`<i class="${i===idx?'a':''}"></i>`).join('');
+  $('#prev').disabled=idx===0;
+  $('#next').textContent=idx===d.s.length-1?'آزمون نهایی 🎯':'بعدی ←';
+  document.querySelector('main').scrollTop=0;
+  setTimeout(()=>{
+    document.querySelectorAll('.fill').forEach(f=>f.style.width=f.dataset.w+'%');
+    document.querySelectorAll('[data-count]').forEach(el=>{
+      const end=parseFloat(el.dataset.count),suf=el.dataset.suf,t0=performance.now();
+      (function tick(t){const p=Math.min((t-t0)/1400,1),v=end*(1-Math.pow(1-p,3));
+        el.textContent=(end%1?v.toFixed(1):Math.round(v)).toString().replace(/\d/g,x=>'۰۱۲۳۴۵۶۷۸۹'[x]).replace('.','٫')+suf;
+        if(p<1)requestAnimationFrame(tick)})(t0);
+    });
+  },80);
+}
+
+function openDeck(k){view=k;idx=0;render()}
+function goHome(){view='home';render()}
+function step(n){
+  if(view==='home')return;
+  const len=DECKS[view].s.length,ni=idx+n;
+  if(ni>=len){
+    startBigQuiz(view);
+    return;
+  }
+  if(ni<0)return;
+  idx=ni;render();
+}
+
+function toggleFS(){
+  if(!document.fullscreenElement)document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen();
+  else document.exitFullscreen();
+}
+
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowLeft'){step(1)}
+  else if(e.key==='ArrowRight'){step(-1)}
+  else if(e.key==='f'||e.key==='F'){toggleFS()}
+  else if(e.key==='Escape'&&!document.fullscreenElement){goHome()}
+});
+
+render();
+</script>
+</body>
+</html>
+ 
